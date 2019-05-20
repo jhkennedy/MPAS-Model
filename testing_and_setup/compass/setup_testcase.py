@@ -1379,7 +1379,7 @@ def get_defined_files(config_file, init_path, configs):  # {{{
 
                                     try:
                                         subprocess.check_call(
-                                            ['wget', '-q', '{}'.format(path)],
+                                            ['wget', '--no-check-certificate', '-q', '{}'.format(path)],
                                             stdout=dev_null, stderr=dev_null)
                                     except subprocess.CalledProcessError:
                                         print " Wget failed...."
